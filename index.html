@@ -7,63 +7,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #121212;
+      background-color: #0e0e0e;
       color: #39ff14;
       font-family: 'Share Tech Mono', monospace;
-      margin: 0;
-      padding: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
       text-align: center;
-    }
-
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #39ff14;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 10px auto;
-      line-height: 1.5;
-      text-shadow: 0 0 5px #39ff14;
-    }
-
-    .arch {
-      font-style: italic;
-      color: #00ff9f;
-      text-shadow: 0 0 10px #00ff9f;
     }
 
     a {
       color: #39ff14;
       text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #39ff14;
-      padding: 5px 10px;
-      border-radius: 5px;
-      transition: all 0.3s ease;
     }
 
     a:hover {
-      background-color: #39ff14;
-      color: #121212;
-      box-shadow: 0 0 10px #39ff14;
+      text-shadow: 0 0 5px #39ff14;
+    }
+
+    .counter {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #00ff9f;
+      text-shadow: 0 0 8px #00ff9f;
     }
   </style>
 </head>
 <body>
   <div>
-    <h1>andrewtheiv</h1>
-    <p>🚫 Fuck proprietary software.</p>
-    <p>🐧 Run Linux. Write code. Own your system.</p>
-    <p class="arch">btw I use Arch.</p>
-    <p>💾 Everything here is open — <a href="https://github.com/AndrewTheIV">check the code</a>.</p>
-    <p>📫 Contact: <a href="mailto:your@email.com">your@email.com</a></p>
+    <p>Reach me on XMPP: <a href="xmpp:andrew@based.pt">andrew@based.pt</a></p>
+    <p>Arch user and fellow Tux companion since July 2024</p>
+    <div class="counter" id="counter"></div>
   </div>
+
+  <script>
+    // Live counter: days since July 1, 2024
+    const startDate = new Date('2024-07-01T00:00:00');
+    const now = new Date();
+    const days = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
+    if (days >= 0) {
+      document.getElementById('counter').textContent =
+        `🗓 ${days} day${days !== 1 ? 's' : ''} of freedom`;
+    }
+  </script>
 </body>
 </html>
