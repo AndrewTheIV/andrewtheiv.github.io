@@ -38,8 +38,9 @@
 </head>
 <body>
   <div>
-    <p>Reach me on XMPP: <a href="xmpp:andrew@based.pt">andrew@based.pt</a></p>
+    <p>Reach me via XMPP: andrew@based.pt</p>
     <p>Arch user and fellow Tux companion since July 2024</p>
+    <p>Visit my comrade's site: <a href="https://based.pt" target="_blank">based.pt</a></p>
     <div class="counter" id="counter"></div>
   </div>
 
@@ -50,7 +51,7 @@
     const days = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
     if (days >= 0) {
       document.getElementById('counter').textContent =
-        `🗓 ${days} day${days !== 1 ? 's' : ''} of freedom`;
+        `${days} day${days !== 1 ? 's' : ''} of freedom`;
     }
   </script>
 </body>
