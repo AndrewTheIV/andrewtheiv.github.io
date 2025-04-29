@@ -45,4 +45,35 @@
   </div>
 
   <script>
-    const startDate = new Date('2024-07-01T00:00:00+01:00');
+    // Set the start date (CET: July 1, 2024, midnight)
+    const startDate = new Date('2024-07-01T00:00:00+01:00'); // CET (UTC+1, adjusting for daylight saving)
+
+    function updateCounter() {
+      const now = new Date();
+
+      // Calculate the difference between the current time and start date
+      const diff = now - startDate;
+      
+      if (diff >= 0) {
+        // Calculate the total seconds difference
+        const totalSeconds = Math.floor(diff / 1000);
+        
+        // Breakdown the total seconds into days, hours, minutes, seconds
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        // Display the counter
+        document.getElementById('counter').textContent =
+          `${days} day${days !== 1 ? 's' : ''}, ` +
+          `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} of freedom`;
+      }
+    }
+
+    // Update the counter every second
+    updateCounter();
+    setInterval(updateCounter, 1000);
+  </script>
+</body>
+</html>
