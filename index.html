@@ -1,57 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>andrewtheiv</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0f0f0f;
-      color: #00ffee;
-      font-family: 'Courier New', monospace;
+      background-color: #121212;
+      color: #39ff14;
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      padding: 50px;
     }
 
     h1 {
-      font-size: 3em;
-      color: #00ffee;
-      text-shadow: 0 0 10px #00ffee;
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #39ff14;
     }
 
     p {
-      font-size: 1.2em;
-      color: #bbbbbb;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 10px auto;
+      line-height: 1.5;
+      text-shadow: 0 0 5px #39ff14;
+    }
+
+    .arch {
+      font-style: italic;
+      color: #00ff9f;
+      text-shadow: 0 0 10px #00ff9f;
     }
 
     a {
-      color: #00ffee;
+      color: #39ff14;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s;
+      border: 2px solid #39ff14;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
     }
 
     a:hover {
-      color: #ffffff;
-      text-shadow: 0 0 10px #ffffff;
-    }
-
-    .glow-box {
-      border: 2px solid #00ffee;
-      padding: 20px;
-      margin: 20px auto;
-      width: 80%;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #00ffee;
+      background-color: #39ff14;
+      color: #121212;
+      box-shadow: 0 0 10px #39ff14;
     }
   </style>
 </head>
 <body>
-  <h1>andrewtheiv</h1>
-  <div class="glow-box">
-    <p>👋 Hi, I'm Andrew. I'm into coding, hacking on Linux, and making cool stuff on the web.</p>
-    <p>💻 Projects: <a href="https://github.com/andrewtheiv">Check out my GitHub</a></p>
+  <div>
+    <h1>andrewtheiv</h1>
+    <p>🚫 Fuck proprietary software.</p>
+    <p>🐧 Run Linux. Write code. Own your system.</p>
+    <p class="arch">btw I use Arch.</p>
+    <p>💾 Everything here is open — <a href="https://github.com/AndrewTheIV">check the code</a>.</p>
     <p>📫 Contact: <a href="mailto:your@email.com">your@email.com</a></p>
   </div>
 </body>
