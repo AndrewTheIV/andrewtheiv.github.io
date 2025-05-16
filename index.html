@@ -12,10 +12,11 @@
       font-family: 'Share Tech Mono', monospace;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       min-height: 100vh;
       margin: 0;
+      padding: 2rem;
       text-align: center;
     }
 
@@ -45,12 +46,13 @@
       padding: 20px;
       border: 1px solid #39ff14;
       font-family: monospace;
+      white-space: pre-wrap;
     }
 
     .Statement { font-weight: bold; }
     .Special { color: #00ffff; }
     .String { color: #00ff00; }
-    .Constant {}
+    .Constant { color: #ffcc00; }
     .Operator {}
     .Delimiter {}
     .Function { color: #00ffff; }
@@ -64,20 +66,20 @@
     <div class="counter" id="counter"></div>
   </div>
 
-  <!-- Vim-exported HTML block -->
+  <!-- Cleaned Vim-styled C code block -->
   <div class="vim-code">
 <pre>
 <span class="Statement">#include</span> <span class="String">&lt;stdio.h&gt;</span>
 <span class="Statement">#include</span> <span class="String">&lt;unistd.h&gt;</span>
 
-<span class="Special">int</span> <span class="-variable"><span class="Function">main</span></span><span class="Delimiter">(</span>>
-    <span class="Statement">const</span> <span class="Special">char</span> <span class="Operator">*</span><span class="-variable">>
-    <span class="Statement">for</span> <span class="Delimiter">(</span><span class="Special">int</span> <span class="-variable">i<>
-        <span class="-variable"><span class="Function">printf</span></span><span class="Delimiter">(</span><span class="String">&q>
-        <span class="-variable"><span class="Function">fflush</span></span><span class="Delimiter">(</span><span class="-variable">
-        <span class="-variable"><span class="Function">usleep</span></span><span class="Delimiter">(</span><span class="Constant">>
+<span class="Special">int</span> <span class="Function">main</span><span class="Delimiter">()</span> <span class="Delimiter">{</span>
+    <span class="Statement">const</span> <span class="Special">char</span> <span class="Operator">*</span><span class="-variable">spinner</span> <span class="Operator">=</span> <span class="String">"|/-\\\\"</span><span class="Delimiter">;</span>
+    <span class="Statement">for</span> <span class="Delimiter">(</span><span class="Special">int</span> <span class="-variable">i</span> <span class="Operator">=</span> <span class="Constant">0</span><span class="Delimiter">;</span> <span class="-variable">i</span> <span class="Operator">&lt;</span> <span class="Constant">100</span><span class="Delimiter">;</span> <span class="-variable">i</span><span class="Operator">++</span><span class="Delimiter">)</span> <span class="Delimiter">{</span>
+        <span class="Function">printf</span><span class="Delimiter">(</span><span class="String">"\r[%c] Loading..."</span><span class="Delimiter">,</span> <span class="-variable">spinner</span><span class="Delimiter">[</span><span class="-variable">i</span> <span class="Operator">%</span> <span class="Constant">4</span><span class="Delimiter">]</span><span class="Delimiter">)</span><span class="Delimiter">;</span>
+        <span class="Function">fflush</span><span class="Delimiter">(</span><span class="Constant">stdout</span><span class="Delimiter">)</span><span class="Delimiter">;</span>
+        <span class="Function">usleep</span><span class="Delimiter">(</span><span class="Constant">100000</span><span class="Delimiter">)</span><span class="Delimiter">;</span>
     <span class="Delimiter">}</span>
-    <span class="-variable"><span class="Function">printf</span></span><span class="Delimiter">(</span><span class="String">&quot;>
+    <span class="Function">printf</span><span class="Delimiter">(</span><span class="String">"\nDone!\n"</span><span class="Delimiter">)</span><span class="Delimiter">;</span>
     <span class="Statement">return</span> <span class="Constant">0</span><span class="Delimiter">;</span>
 <span class="Delimiter">}</span>
 </pre>
