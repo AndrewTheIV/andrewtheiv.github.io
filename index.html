@@ -14,7 +14,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       text-align: center;
     }
@@ -34,6 +34,26 @@
       color: #00ff9f;
       text-shadow: 0 0 8px #00ff9f;
     }
+
+    .vim-code {
+      text-align: left;
+      margin-top: 40px;
+      max-width: 90%;
+      overflow-x: auto;
+      background-color: #000000;
+      color: #e5e5e5;
+      padding: 20px;
+      border: 1px solid #39ff14;
+      font-family: monospace;
+    }
+
+    .Statement { font-weight: bold; }
+    .Special { color: #00ffff; }
+    .String { color: #00ff00; }
+    .Constant {}
+    .Operator {}
+    .Delimiter {}
+    .Function { color: #00ffff; }
   </style>
 </head>
 <body>
@@ -44,34 +64,41 @@
     <div class="counter" id="counter"></div>
   </div>
 
-  <script>
-    // Set the start date (CET/CEST: July 1, 2024, midnight)
-    const startDate = new Date('2024-07-01T00:00:00+02:00'); // CEST (Germany's timezone with daylight saving time)
+  <!-- Vim-exported HTML block -->
+  <div class="vim-code">
+<pre>
+<span class="Statement">#include</span> <span class="String">&lt;stdio.h&gt;</span>
+<span class="Statement">#include</span> <span class="String">&lt;unistd.h&gt;</span>
 
+<span class="Special">int</span> <span class="-variable"><span class="Function">main</span></span><span class="Delimiter">(</span>>
+    <span class="Statement">const</span> <span class="Special">char</span> <span class="Operator">*</span><span class="-variable">>
+    <span class="Statement">for</span> <span class="Delimiter">(</span><span class="Special">int</span> <span class="-variable">i<>
+        <span class="-variable"><span class="Function">printf</span></span><span class="Delimiter">(</span><span class="String">&q>
+        <span class="-variable"><span class="Function">fflush</span></span><span class="Delimiter">(</span><span class="-variable">
+        <span class="-variable"><span class="Function">usleep</span></span><span class="Delimiter">(</span><span class="Constant">>
+    <span class="Delimiter">}</span>
+    <span class="-variable"><span class="Function">printf</span></span><span class="Delimiter">(</span><span class="String">&quot;>
+    <span class="Statement">return</span> <span class="Constant">0</span><span class="Delimiter">;</span>
+<span class="Delimiter">}</span>
+</pre>
+  </div>
+
+  <script>
+    const startDate = new Date('2024-07-01T00:00:00+02:00');
     function updateCounter() {
       const now = new Date();
-
-      // Calculate the difference between the current time and start date
       const diff = now - startDate;
-      
       if (diff >= 0) {
-        // Calculate the total seconds difference
         const totalSeconds = Math.floor(diff / 1000);
-        
-        // Breakdown the total seconds into days, hours, minutes, seconds
         const days = Math.floor(totalSeconds / 86400);
         const hours = Math.floor((totalSeconds % 86400) / 3600);
         const minutes = Math.floor((totalSeconds % 3600) / 60);
         const seconds = totalSeconds % 60;
-
-        // Display the counter
         document.getElementById('counter').textContent =
           `${days} day${days !== 1 ? 's' : ''}, ` +
           `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} of freedom`;
       }
     }
-
-    // Update the counter every second
     updateCounter();
     setInterval(updateCounter, 1000);
   </script>
