@@ -1,0 +1,142 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #00ff66;
+  font-family: 'Press Start 2P', monospace;
+  padding: 2rem;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 90ch;
+}
+
+h1 {
+  font-size: 2rem;
+  text-shadow: 0 0 5px #00ff66;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #00ffaa;
+  border-bottom: 2px dashed transparent;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+nav a:hover {
+  color: #ffffff;
+  border-color: #00ffaa;
+}
+
+nav a.active {
+  color: #ffffff;
+  border-color: #00ffaa;
+  text-shadow: 0 0 5px #00ffaa;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "$ ";
+  color: #00ff66;
+  font-weight: bold;
+}
+
+a {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.tool {
+  color: #00ffee;
+  text-shadow: 0 0 3px #00ffee;
+  font-weight: normal;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #003311;
+  text-align: center;
+  font-size: 0.75rem;
+  text-shadow: 0 0 3px #00ff66;
+  color: #00cc66;
+}
+
+footer img {
+  image-rendering: pixelated;
+  height: 31px;
+  width: auto;
+  margin: 5px;
+  filter: drop-shadow(0 0 1px #00ff66);
+  vertical-align: middle;
+}
+
+/* BLOG SPECIFIC */
+
+.blog-header {
+  text-align: center;
+  font-weight: bold;
+  color: #00ffaa;
+  text-shadow: 0 0 6px #00ffaa;
+  margin: 2rem 0 1rem;
+}
+
+.blog-tags {
+  text-align: center;
+  color: #00cc88;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.blog-content {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.blog-quote {
+  text-align: center;
+  color: #00ffaa;
+  font-style: italic;
+  margin: 1.5rem 0;
+  text-shadow: 0 0 3px #00ffaa;
+}
+
+.box {
+  border: 1px solid #00ffaa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #000;
+  box-shadow: 0 0 8px #00ffaa44;
+}
+
