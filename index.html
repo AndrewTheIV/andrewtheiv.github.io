@@ -1,198 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ANDREW'S CAVE</title>
+  <title>ALMIGHTY ANDREW - WHOAMI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #000;
-      color: #00ff66;
-      font-family: 'Press Start 2P', monospace;
-      padding: 2rem;
-      margin: 0 auto;
-      font-size: 1rem;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      max-width: 90ch;
-    }
-
-    h1 {
-      font-size: 2rem;
-      text-shadow: 0 0 5px #00ff66;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    input[type="radio"] {
-      display: none;
-    }
-
-    /* Center labels */
-    .tab-labels {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .tab-labels label {
-      display: inline-block;
-      margin: 0 0.5rem;
-      padding: 0.5rem 1rem;
-      color: #00ffaa;
-      border-bottom: 2px dashed transparent;
-      text-transform: uppercase;
-      user-select: none;
-      cursor: pointer;
-      transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
-    }
-
-    .tab-labels label:hover {
-      color: #ffffff;
-      border-color: #00ffaa;
-    }
-
-    input#whoami:checked ~ .tab-labels label[for="whoami"],
-    input#setup:checked ~ .tab-labels label[for="setup"],
-    input#projects:checked ~ .tab-labels label[for="projects"],
-    input#contact:checked ~ .tab-labels label[for="contact"],
-    input#credits:checked ~ .tab-labels label[for="credits"] {
-      color: #ffffff;
-      border-color: #00ffaa;
-      text-shadow: 0 0 5px #00ffaa;
-    }
-
-    .section {
-      display: none;
-    }
-
-    #whoami:checked ~ #whoami-content,
-    #setup:checked ~ #setup-content,
-    #projects:checked ~ #projects-content,
-    #contact:checked ~ #contact-content,
-    #credits:checked ~ #credits-content {
-      display: block;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li::before {
-      content: "$ ";
-      color: #00ff66;
-      font-weight: bold;
-    }
-
-    a {
-      color: #00ff99;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .tool {
-      color: #00ffee;
-      text-shadow: 0 0 3px #00ffee;
-      font-weight: normal;
-    }
-
-    footer {
-      margin-top: auto;
-      padding-top: 1rem;
-      border-top: 1px solid #003311;
-      text-align: center;
-      font-size: 0.75rem;
-      text-shadow: 0 0 3px #00ff66;
-      color: #00cc66;
-    }
-
-    footer img {
-      image-rendering: pixelated;
-      height: 31px;
-      width: auto;
-      margin: 5px;
-      filter: drop-shadow(0 0 1px #00ff66);
-      vertical-align: middle;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <h1>ALMIGHTY ANDREW</h1>
 
-  <!-- Radio buttons -->
-  <input type="radio" name="tab" id="whoami" checked>
-  <input type="radio" name="tab" id="setup">
-  <input type="radio" name="tab" id="projects">
-  <input type="radio" name="tab" id="contact">
-  <input type="radio" name="tab" id="credits">
+  <nav>
+    <a href="index.html"       class="active">WHOAMI</a>
+    <a href="setup.html">SETUP</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="blog.html">BLOG</a>
+    <a href="credits.html">CREDITS</a>
+  </nav>
 
-  <!-- Labels -->
-  <div class="tab-labels">
-    <label for="whoami">WHOAMI</label>
-    <label for="setup">SETUP</label>
-    <label for="projects">PROJECTS</label>
-    <label for="contact">CONTACT</label>
-    <label for="credits">CREDITS</label>
-  </div>
-
-  <!-- Content -->
-  <div class="section" id="whoami-content">
+  <div class="box">
     <p>
-      An <span class="tool">Arch Linux</span> user from Germany, daily-driving <span class="tool">DWM</span>.
-      I believe in minimalism, owning your software (FOSS), and building things with purpose.
+      An <span class="tool">Arch Linux</span> user from Germany, daily-driving <span class="tool">DWM</span>.<br />
+      I believe in minimalism, owning your software (FOSS), and building things with purpose.<br />
       Most of what I do stays offline - For now.
     </p>
   </div>
 
-  <div class="section" id="setup-content">
-    <ul>
-      <li>OS: <span class="tool">Arch Linux</span></li>
-      <li>WM: <span class="tool">dwm</span></li>
-      <li>Terminal: <span class="tool">st</span></li>
-      <li>Shell: <span class="tool">zsh</span></li>
-      <li>Editor: <span class="tool">nvim</span></li>
-      <li>Browser: <span class="tool">librewolf</span></li>
-      <li>Boot: <span class="tool">TTY</span> login, no display manager</li>
-    </ul>
-  </div>
-
-  <div class="section" id="projects-content">
-    <p>No public projects yet. Might release my custom Cmus Rich Presence or some DWM patches eventually.</p>
-  </div>
-
-
-  <div class="section" id="contact-content">
-  <div style="padding-left: 20px;">
-    XMPP: andrew@based.pt<br>
-    Discord: @yourworstnigthmare<br>
-  </div>
-</div>
-
-
-  <div class="section" id="credits-content">
-    <ul>
-      <li><a href="https://archlinux.org" target="_blank"><span class="tool">Arch Linux</span></a></li>
-      <li><a href="https://suckless.org" target="_blank"><span class="tool">suckless.org</span></a></li>
-      <li><a href="https://neovim.io" target="_blank"><span class="tool">neovim</span></a></li>
-      <li><a href="https://librewolf.net" target="_blank"><span class="tool">Librewolf</span></a></li>
-    </ul>
-  </div>
-
   <footer>
-    [ Proudly 100% HTML + CSS | No JS | No Cookies | No Telemetry ]
-    <br />
+    [ Proudly 100% HTML + CSS | No JS | No Cookies | No Telemetry ]<br />
     <a href="https://88x31.kate.pet/madeon_linux.gif" target="_blank">
       <img src="https://88x31.kate.pet/madeon_linux.gif" alt="Made on Linux" />
     </a>
